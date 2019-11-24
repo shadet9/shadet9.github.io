@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-24T11:24:44.628Z</updated>
+  <updated>2019-11-24T11:29:21.137Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="http://yoursite.com/2019/11/24/%E5%85%B3%E4%BA%8EArcmap%E9%80%9A%E8%BF%87Fishnet-Aggregation%E7%94%9F%E6%88%90POI%E5%AF%86%E5%BA%A6%E5%9B%BE%E7%9A%84%E5%8A%9E%E6%B3%95/"/>
     <id>http://yoursite.com/2019/11/24/%E5%85%B3%E4%BA%8EArcmap%E9%80%9A%E8%BF%87Fishnet-Aggregation%E7%94%9F%E6%88%90POI%E5%AF%86%E5%BA%A6%E5%9B%BE%E7%9A%84%E5%8A%9E%E6%B3%95/</id>
     <published>2019-11-24T11:06:34.000Z</published>
-    <updated>2019-11-24T11:24:44.628Z</updated>
+    <updated>2019-11-24T11:29:21.137Z</updated>
     
     <content type="html"><![CDATA[<p><font size="4"><strong>1. 导入数据</strong></font></p><p>  将POI点数据和边界POLYGON数据导入Arcmap。<br><br>  <strong>注意：数据需定义投影坐标，数据框的坐标也进行修改。</strong><br>  <img src="/2019/11/24/%E5%85%B3%E4%BA%8EArcmap%E9%80%9A%E8%BF%87Fishnet-Aggregation%E7%94%9F%E6%88%90POI%E5%AF%86%E5%BA%A6%E5%9B%BE%E7%9A%84%E5%8A%9E%E6%B3%95/1.jpg" alt title="数据点图"></p><p><font size="4"><strong>2. 生成渔网</strong></font></p><p>  这一步是生成选定一定像元大小的渔网。<br><br>  首先打开创建渔网工具，输出要素类：定义储存位置和名词。<br><br>  模板范围：选择边界。像元宽度和高度根据实际需求选择（本例中选择200*200）<br><br>  取消创建标注点选择，几何类型更改为polygon。</p><p><font size="4"><strong>3. Spatial Join</strong></font></p><p>  在第二步生成的渔网是没有包括实质信息的，这一步是通过Spatial Join计算出渔网中每个像元中存在的POI数量。<br><br>  首先打开空间连接工具，目标要素：fishnet。连接要素：POI数据。<br><br>  连接要素的字段映射：仅保留id字段。匹配选项：CONTAINS。<br><br>  生成的渔网将会产生一个新字段：Joint_Count</p><p><font size="4"><strong>4. 得到密度图</strong></font></p><p>  对第三步生成的渔网的属性表进行修改。分别添加面积字段和密度字段（类型为双精度，精度为10）。右键面积字段选择计算几何，可将单位修改为平方米。右键密度字段选择字段计算器，输入公式[Joint_Count]/[面积],得到密度值。<br><br>  打开符号系统选择数量-分级色彩-选择自己喜欢的颜色和分类，DONE!<br>      <img src="/2019/11/24/%E5%85%B3%E4%BA%8EArcmap%E9%80%9A%E8%BF%87Fishnet-Aggregation%E7%94%9F%E6%88%90POI%E5%AF%86%E5%BA%A6%E5%9B%BE%E7%9A%84%E5%8A%9E%E6%B3%95/2.jpg" alt title="密度图"></p>]]></content>
     
     <summary type="html">
     
-      一个可能省时也可能没区别的方法
+      简单生成渔网图
     
     </summary>
     
