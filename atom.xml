@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-24T05:14:56.230Z</updated>
+  <updated>2019-11-24T05:30:40.213Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>ID实现图片自动排版</title>
-    <link href="http://yoursite.com/2019/11/24/ID%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%8E%92%E7%89%88/ID%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%8E%92%E7%89%88/"/>
-    <id>http://yoursite.com/2019/11/24/ID%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%8E%92%E7%89%88/ID%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%8E%92%E7%89%88/</id>
+    <link href="http://yoursite.com/2019/11/24/ID%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%8E%92%E7%89%88/"/>
+    <id>http://yoursite.com/2019/11/24/ID%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%8E%92%E7%89%88/</id>
     <published>2019-11-24T03:00:00.000Z</published>
-    <updated>2019-11-24T05:14:56.230Z</updated>
+    <updated>2019-11-24T05:30:40.213Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p><strong>注意：txt 必须是unicode编码</strong></p></blockquote><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ul><li>打开ID,新建文档，选择大小</li><li><strong>ctrl+D</strong>置入选择所有图片，复制所有图片名字，粘贴到notepad，通过REG得到图片的名字（这一步是选择名字，如果不要名字可跳转第三步）</li><li>在文件夹中选中所有需要的图片，shift+右键选择复制图片路径。粘贴至notepad直接使用替换，将”去除。</li></ul><p><img src="https://i.loli.net/2019/05/08/5cd2e5d3d597c.jpg" alt="选项"></p><ul><li>将txt后缀改成csv,添加首行为@route,另存为txt。</li></ul><p><img src="https://i.loli.net/2019/05/08/5cd2e71ce1028.jpg" alt="csv"></p><ul><li>设置合适的矩形框，打开数据合并选项，打开右上角角标，选择选择数据源，将做好的txt导入进来，将route拖入矩形框中，选择右下角：创建合并文档；选择多个记录，左下角可以选预览，接着在<strong>多个记录版面</strong>调整图片间距，点击确定即可完成。</li></ul><p><img src="https://i.loli.net/2019/05/08/5cd2e80dc811a.jpg" alt="矩形图片框架"></p><p><img src="https://i.loli.net/2019/05/08/5cd2e7c3003b3.jpg" alt="数据合并选项"></p><p><img src="https://i.loli.net/2019/05/08/5cd2e86608b22.jpg" alt="选择数据源"></p><p><img src="https://i.loli.net/2019/05/08/5cd2e8c15dbca.jpg" alt="将route拖入图片框"></p><p><img src="https://i.loli.net/2019/05/08/5cd2e908ba0da.jpg" alt="创建合并文档"></p><p><img src="https://i.loli.net/2019/05/08/5cd2e94212dbe.jpg" alt="选择多个记录,预览结果"></p>]]></content>
     
