@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://tykhe.xyz/"/>
   <updated>2019-11-24T11:29:21.137Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://tykhe.xyz/</id>
   
   <author>
     <name>Tykhe</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>关于Arcmap通过Fishnet Aggregation生成POI密度图的办法</title>
-    <link href="http://yoursite.com/2019/11/24/%E5%85%B3%E4%BA%8EArcmap%E9%80%9A%E8%BF%87Fishnet-Aggregation%E7%94%9F%E6%88%90POI%E5%AF%86%E5%BA%A6%E5%9B%BE%E7%9A%84%E5%8A%9E%E6%B3%95/"/>
-    <id>http://yoursite.com/2019/11/24/%E5%85%B3%E4%BA%8EArcmap%E9%80%9A%E8%BF%87Fishnet-Aggregation%E7%94%9F%E6%88%90POI%E5%AF%86%E5%BA%A6%E5%9B%BE%E7%9A%84%E5%8A%9E%E6%B3%95/</id>
+    <link href="http://tykhe.xyz/2019/11/24/%E5%85%B3%E4%BA%8EArcmap%E9%80%9A%E8%BF%87Fishnet-Aggregation%E7%94%9F%E6%88%90POI%E5%AF%86%E5%BA%A6%E5%9B%BE%E7%9A%84%E5%8A%9E%E6%B3%95/"/>
+    <id>http://tykhe.xyz/2019/11/24/%E5%85%B3%E4%BA%8EArcmap%E9%80%9A%E8%BF%87Fishnet-Aggregation%E7%94%9F%E6%88%90POI%E5%AF%86%E5%BA%A6%E5%9B%BE%E7%9A%84%E5%8A%9E%E6%B3%95/</id>
     <published>2019-11-24T11:06:34.000Z</published>
     <updated>2019-11-24T11:29:21.137Z</updated>
     
@@ -33,18 +33,18 @@
     
     
     
-      <category term="tutorial" scheme="http://yoursite.com/tags/tutorial/"/>
+      <category term="tutorial" scheme="http://tykhe.xyz/tags/tutorial/"/>
     
-      <category term="arcgis" scheme="http://yoursite.com/tags/arcgis/"/>
+      <category term="arcgis" scheme="http://tykhe.xyz/tags/arcgis/"/>
     
-      <category term="map" scheme="http://yoursite.com/tags/map/"/>
+      <category term="map" scheme="http://tykhe.xyz/tags/map/"/>
     
   </entry>
   
   <entry>
     <title>ID实现图片自动排版</title>
-    <link href="http://yoursite.com/2019/11/24/ID%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%8E%92%E7%89%88/"/>
-    <id>http://yoursite.com/2019/11/24/ID%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%8E%92%E7%89%88/</id>
+    <link href="http://tykhe.xyz/2019/11/24/ID%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%8E%92%E7%89%88/"/>
+    <id>http://tykhe.xyz/2019/11/24/ID%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%8E%92%E7%89%88/</id>
     <published>2019-11-24T03:00:00.000Z</published>
     <updated>2019-11-24T05:30:40.213Z</updated>
     
@@ -58,9 +58,9 @@
     
     
     
-      <category term="InDeisgn" scheme="http://yoursite.com/tags/InDeisgn/"/>
+      <category term="InDeisgn" scheme="http://tykhe.xyz/tags/InDeisgn/"/>
     
-      <category term="cut-corners" scheme="http://yoursite.com/tags/cut-corners/"/>
+      <category term="cut-corners" scheme="http://tykhe.xyz/tags/cut-corners/"/>
     
   </entry>
   
