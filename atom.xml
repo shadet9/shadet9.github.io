@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>Tykhe&#39;s Diary</title>
   
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-24T00:38:15.718Z</updated>
+  <updated>2019-11-24T03:11:53.099Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,35 +17,13 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://yoursite.com/2019/11/24/hello-world/"/>
-    <id>http://yoursite.com/2019/11/24/hello-world/</id>
-    <published>2019-11-24T00:38:15.718Z</published>
-    <updated>2019-11-24T00:38:15.718Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>ID实现图片自动排版</title>
     <link href="http://yoursite.com/2018/11/24/ID%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%8E%92%E7%89%88/"/>
     <id>http://yoursite.com/2018/11/24/ID%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%8E%92%E7%89%88/</id>
     <published>2018-11-24T03:00:00.000Z</published>
-    <updated>2019-11-24T02:32:45.177Z</updated>
+    <updated>2019-11-24T03:11:53.099Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p><strong>注意：txt 必须是unicode编码</strong></p></blockquote><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ul><li>打开ID,新建文档，选择大小<font color="cc2f3c"></li><li><strong>ctrl+D</strong>置入选择所有图片，复制所有图片名字，粘贴到notepad，通过REG得到图片的名字（这一步是选择名字，如果不要名字可跳转第三步）</li><li>在文件夹中选中所有需要的图片，shift+右键选择复制图片路径。粘贴至notepad直接使用替换，将”去除。</li></ul><p><img src="https://i.loli.net/2019/05/08/5cd2e5d3d597c.jpg" alt="选项"></p><ul><li>将txt后缀改成csv,添加首行为@route,另存为txt。</li></ul><p><img src="https://i.loli.net/2019/05/08/5cd2e71ce1028.jpg" alt="csv"></p><ul><li>设置合适的矩形框，打开数据合并选项，打开右上角角标，选择选择数据源，将做好的txt导入进来，将route拖入矩形框中，选择右下角：创建合并文档；选择多个记录，左下角可以选预览，接着在<strong>多个记录版面</strong>调整图片间距，点击确定即可完成。</li></ul><p><img src="https://i.loli.net/2019/05/08/5cd2e80dc811a.jpg" alt="矩形图片框架"></p><p><img src="https://i.loli.net/2019/05/08/5cd2e7c3003b3.jpg" alt="数据合并选项"></p><p><img src="https://i.loli.net/2019/05/08/5cd2e86608b22.jpg" alt="选择数据源"></p><p><img src="https://i.loli.net/2019/05/08/5cd2e8c15dbca.jpg" alt="将route拖入图片框"></p><p><img src="https://i.loli.net/2019/05/08/5cd2e908ba0da.jpg" alt="创建合并文档"></p><p><img src="https://i.loli.net/2019/05/08/5cd2e94212dbe.jpg" alt="选择多个记录,预览结果"></p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p><strong>注意：txt 必须是unicode编码</strong></p></blockquote><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ul><li>打开ID,新建文档，选择大小</li><li><strong>ctrl+D</strong>置入选择所有图片，复制所有图片名字，粘贴到notepad，通过REG得到图片的名字（这一步是选择名字，如果不要名字可跳转第三步）</li><li>在文件夹中选中所有需要的图片，shift+右键选择复制图片路径。粘贴至notepad直接使用替换，将”去除。</li></ul><p><img src="https://i.loli.net/2019/05/08/5cd2e5d3d597c.jpg" alt="选项"></p><ul><li>将txt后缀改成csv,添加首行为@route,另存为txt。</li></ul><p><img src="https://i.loli.net/2019/05/08/5cd2e71ce1028.jpg" alt="csv"></p><ul><li>设置合适的矩形框，打开数据合并选项，打开右上角角标，选择选择数据源，将做好的txt导入进来，将route拖入矩形框中，选择右下角：创建合并文档；选择多个记录，左下角可以选预览，接着在<strong>多个记录版面</strong>调整图片间距，点击确定即可完成。</li></ul><p><img src="https://i.loli.net/2019/05/08/5cd2e80dc811a.jpg" alt="矩形图片框架"></p><p><img src="https://i.loli.net/2019/05/08/5cd2e7c3003b3.jpg" alt="数据合并选项"></p><p><img src="https://i.loli.net/2019/05/08/5cd2e86608b22.jpg" alt="选择数据源"></p><p><img src="https://i.loli.net/2019/05/08/5cd2e8c15dbca.jpg" alt="将route拖入图片框"></p><p><img src="https://i.loli.net/2019/05/08/5cd2e908ba0da.jpg" alt="创建合并文档"></p><p><img src="https://i.loli.net/2019/05/08/5cd2e94212dbe.jpg" alt="选择多个记录,预览结果"></p>]]></content>
     
     <summary type="html">
     
