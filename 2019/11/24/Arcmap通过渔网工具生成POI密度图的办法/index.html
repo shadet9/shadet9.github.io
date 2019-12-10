@@ -4,7 +4,7 @@
 <html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 
 <head>
-    <title>关于Arcmap通过Fishnet Aggregation生成POI密度图的办法 - Tykhe&#39;s Diary</title>
+    <title>Arcmap通过渔网工具生成POI密度图的办法 - Tykhe&#39;s Diary</title>
 <meta charset="utf-8">
 <meta name="X-UA-Compatible" content="IE=edge">
 <meta name="author" content="Tykhe">
@@ -20,7 +20,7 @@
     <meta name="renderer" content="webkit">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
-<link rel="stylesheet" href="/css/journal.css?97553613">
+<link rel="stylesheet" href="/css/journal.css?49800218">
 
 <script src="/js/loadCSS.js"></script>
 <script>
@@ -88,6 +88,10 @@
 
             
             
+            <a class="a-block drawer-menu-item false" href="/About/index.html">
+                About
+            </a>
+            
 
             
             <a class="a-block drawer-menu-item" href="/atom.xml">
@@ -139,6 +143,10 @@
 
         
         
+        <a class="a-block nav-link-item false" href="/About/index.html">
+            About
+        </a>
+        
 
         
         <a class="a-block no-tint nav-link-item" href="/atom.xml">
@@ -156,6 +164,7 @@
         &copy; 2019 <a href="http://tykhe.xyz">Tykhe&#39;s Diary</a>
     </div>
 </div>
+
 <div ref="extraContainer" class="extra-container">
     <div class="pagination">
         <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
@@ -174,9 +183,9 @@
     <div class="post-list-container post-list-container-shadow">
         <div class="post">
             <div class="post-head-wrapper"
-                 style="background-image: url('/2019/11/24/关于Arcmap通过Fishnet-Aggregation生成POI密度图的办法/id.png')">
+                 style="background-image: url('/2019/11/24/Arcmap通过渔网工具生成POI密度图的办法/id.png')">
                 <div class="post-title">
-                    关于Arcmap通过Fishnet Aggregation生成POI密度图的办法
+                    Arcmap通过渔网工具生成POI密度图的办法
                     <div class="post-meta">
                         <time datetime="2019-11-24T11:06:34.000Z" itemprop="datePublished">
                             2019-11-24 19:06
@@ -201,13 +210,13 @@
             <div class="post-body-wrapper">
                 <div class="post-body">
                     <p><font size="4"><strong>1. 导入数据</strong></font></p>
-<p>  将POI点数据和边界POLYGON数据导入Arcmap。<br><br>  <strong>注意：数据需定义投影坐标，数据框的坐标也进行修改。</strong><br>  <img src="/2019/11/24/%E5%85%B3%E4%BA%8EArcmap%E9%80%9A%E8%BF%87Fishnet-Aggregation%E7%94%9F%E6%88%90POI%E5%AF%86%E5%BA%A6%E5%9B%BE%E7%9A%84%E5%8A%9E%E6%B3%95/1.jpg" alt title="数据点图"></p>
+<p>  将POI点数据和边界POLYGON数据导入Arcmap。<br><br>  <strong>注意：数据需定义投影坐标，数据框的坐标也进行修改。</strong><br>  <img src="/2019/11/24/Arcmap%E9%80%9A%E8%BF%87%E6%B8%94%E7%BD%91%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90POI%E5%AF%86%E5%BA%A6%E5%9B%BE%E7%9A%84%E5%8A%9E%E6%B3%95/1.jpg" alt title="数据点图"></p>
 <p><font size="4"><strong>2. 生成渔网</strong></font></p>
 <p>  这一步是生成选定一定像元大小的渔网。<br><br>  首先打开创建渔网工具，输出要素类：定义储存位置和名词。<br><br>  模板范围：选择边界。像元宽度和高度根据实际需求选择（本例中选择200*200）<br><br>  取消创建标注点选择，几何类型更改为polygon。</p>
 <p><font size="4"><strong>3. Spatial Join</strong></font></p>
 <p>  在第二步生成的渔网是没有包括实质信息的，这一步是通过Spatial Join计算出渔网中每个像元中存在的POI数量。<br><br>  首先打开空间连接工具，目标要素：fishnet。连接要素：POI数据。<br><br>  连接要素的字段映射：仅保留id字段。匹配选项：CONTAINS。<br><br>  生成的渔网将会产生一个新字段：Joint_Count</p>
 <p><font size="4"><strong>4. 得到密度图</strong></font></p>
-<p>  对第三步生成的渔网的属性表进行修改。分别添加面积字段和密度字段（类型为双精度，精度为10）。右键面积字段选择计算几何，可将单位修改为平方米。右键密度字段选择字段计算器，输入公式[Joint_Count]/[面积],得到密度值。<br><br>  打开符号系统选择数量-分级色彩-选择自己喜欢的颜色和分类，DONE!<br>      <img src="/2019/11/24/%E5%85%B3%E4%BA%8EArcmap%E9%80%9A%E8%BF%87Fishnet-Aggregation%E7%94%9F%E6%88%90POI%E5%AF%86%E5%BA%A6%E5%9B%BE%E7%9A%84%E5%8A%9E%E6%B3%95/2.jpg" alt title="密度图"></p>
+<p>  对第三步生成的渔网的属性表进行修改。分别添加面积字段和密度字段（类型为双精度，精度为10）。右键面积字段选择计算几何，可将单位修改为平方米。右键密度字段选择字段计算器，输入公式[Joint_Count]/[面积],得到密度值。<br><br>  打开符号系统选择数量-分级色彩-选择自己喜欢的颜色和分类，DONE!<br>      <img src="/2019/11/24/Arcmap%E9%80%9A%E8%BF%87%E6%B8%94%E7%BD%91%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90POI%E5%AF%86%E5%BA%A6%E5%9B%BE%E7%9A%84%E5%8A%9E%E6%B3%95/2.jpg" alt title="密度图"></p>
 
                 </div>
             </div>
@@ -253,14 +262,14 @@
         integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@14.2.1/dist/smooth-scroll.polyfills.min.js"
         integrity="sha256-CI4Gq5E0io1Pv0xM3qPM+NUIOhbIBvC3GiN1Y4KhXpw=" crossorigin="anonymous"></script>
-<script src="/js/journal.js?82611988"></script>
+<script src="/js/journal.js?29244803"></script>
 
 
 <script>
     var disqus_shortname = 'tykhe-1';
     var disqus_config = function () {
-        this.page.url = 'http://tykhe.xyz/2019/11/24/关于Arcmap通过Fishnet-Aggregation生成POI密度图的办法/';
-        this.page.identifier = '/2019/11/24/关于Arcmap通过Fishnet-Aggregation生成POI密度图的办法/';
+        this.page.url = 'http://tykhe.xyz/2019/11/24/Arcmap通过渔网工具生成POI密度图的办法/';
+        this.page.identifier = '/2019/11/24/Arcmap通过渔网工具生成POI密度图的办法/';
     };
     (function () {
         var d = document, s = d.createElement('script');
