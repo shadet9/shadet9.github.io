@@ -3,10 +3,10 @@
   <title>Ailleurs</title>
   
   
-  <link href="/atom.xml" rel="self"/>
+  <link href="http://arielw.xyz/atom.xml" rel="self"/>
   
   <link href="http://arielw.xyz/"/>
-  <updated>2019-12-10T03:30:25.757Z</updated>
+  <updated>2022-05-17T01:49:12.336Z</updated>
   <id>http://arielw.xyz/</id>
   
   <author>
@@ -17,27 +17,54 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>KML火星坐标转换</title>
+    <link href="http://arielw.xyz/2022/05/17/KML%E7%81%AB%E6%98%9F%E5%9D%90%E6%A0%87%E8%BD%AC%E6%8D%A2/"/>
+    <id>http://arielw.xyz/2022/05/17/KML%E7%81%AB%E6%98%9F%E5%9D%90%E6%A0%87%E8%BD%AC%E6%8D%A2/</id>
+    <published>2022-05-17T01:01:05.000Z</published>
+    <updated>2022-05-17T01:49:12.336Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>奥维地图导出kml时，会将标注要素坐标转为GCJ02(俗称，火星坐标)，所以必须转回WGS84，后续才能使用。</p></blockquote><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>一开始我想直接用python转换kml，搜了一圈没有找到合适的轮子。但是我找到了转换geojson坐标的<a href="https://github.com/wandergis/coordtransform-cli">命令行工具</a>，所以决定先将kml转为geojson.</p><h2 id="kml-转-geojson"><a href="#kml-转-geojson" class="headerlink" title="kml 转 geojson"></a>kml 转 geojson</h2><p>安装mapbox开发的<a href="https://github.com/mapbox/togeojson">命令行工具</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @mapbox/togeojson</span><br></pre></td></tr></table></figure><p>将kml转成geojson</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">togeojson file.kml &gt; file.geojson</span><br></pre></td></tr></table></figure><h2 id="GCJ02-转-WGS84"><a href="#GCJ02-转-WGS84" class="headerlink" title="GCJ02 转 WGS84"></a>GCJ02 转 WGS84</h2><p>安装坐标转换命令行工具</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g coordtransform-cli</span><br></pre></td></tr></table></figure><p>转成WGS84</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">coordtransform -t gcj02towgs84  file.geojson output.geojson</span><br></pre></td></tr></table></figure><h2 id="geojson-转-kml"><a href="#geojson-转-kml" class="headerlink" title="geojson 转 kml"></a>geojson 转 kml</h2><p>这一步其实可有可无，用qgis的话直接用geojson就好了。但是arcmap对json不太友好，我导了两次都报错，所以还是转回kml。</p><p>这里一开始用了mapbox的<a href="https://github.com/mapbox/tokml">tokml</a>，但是效果不好，所以改用<a href="https://gdal.org/programs/ogr2ogr.html">ogr2ogr</a>。</p><p>先装GDAL</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install -c conda-forge gdal</span><br></pre></td></tr></table></figure><p>转kml，大功告成～</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ogr2ogr -f KML output.kml output.geojson</span><br></pre></td></tr></table></figure><hr><p>上次写博客还是Pre-COVID，时间一晃就过去2年多了，还是毫无长进:(</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;奥维地图导出kml时，会将标注要素坐标转为GCJ02(俗称，火星坐标)，所以必须转回WGS84，后续才能使用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;思路&quot;&gt;&lt;a href=&quot;#思路&quot; class=&quot;headerlink&quot; title</summary>
+      
+    
+    
+    
+    
+    <category term="坐标转换" scheme="http://arielw.xyz/tags/%E5%9D%90%E6%A0%87%E8%BD%AC%E6%8D%A2/"/>
+    
+    <category term="KML" scheme="http://arielw.xyz/tags/KML/"/>
+    
+    <category term="geojson" scheme="http://arielw.xyz/tags/geojson/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Arcmap通过渔网工具生成POI密度图的办法</title>
     <link href="http://arielw.xyz/2019/11/24/Arcmap%E9%80%9A%E8%BF%87%E6%B8%94%E7%BD%91%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90POI%E5%AF%86%E5%BA%A6%E5%9B%BE%E7%9A%84%E5%8A%9E%E6%B3%95/"/>
     <id>http://arielw.xyz/2019/11/24/Arcmap%E9%80%9A%E8%BF%87%E6%B8%94%E7%BD%91%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90POI%E5%AF%86%E5%BA%A6%E5%9B%BE%E7%9A%84%E5%8A%9E%E6%B3%95/</id>
     <published>2019-11-24T11:06:34.000Z</published>
     <updated>2019-12-10T03:30:25.757Z</updated>
     
-    <content type="html"><![CDATA[<p><font size="4"><strong>1. 导入数据</strong></font></p><p>  将POI点数据和边界POLYGON数据导入Arcmap。<br><br>  <strong>注意：数据需定义投影坐标，数据框的坐标也进行修改。</strong><br>  <img src="/2019/11/24/Arcmap%E9%80%9A%E8%BF%87%E6%B8%94%E7%BD%91%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90POI%E5%AF%86%E5%BA%A6%E5%9B%BE%E7%9A%84%E5%8A%9E%E6%B3%95/1.jpg" alt title="数据点图"></p><p><font size="4"><strong>2. 生成渔网</strong></font></p><p>  这一步是生成选定一定像元大小的渔网。<br><br>  首先打开创建渔网工具，输出要素类：定义储存位置和名词。<br><br>  模板范围：选择边界。像元宽度和高度根据实际需求选择（本例中选择200*200）<br><br>  取消创建标注点选择，几何类型更改为polygon。</p><p><font size="4"><strong>3. Spatial Join</strong></font></p><p>  在第二步生成的渔网是没有包括实质信息的，这一步是通过Spatial Join计算出渔网中每个像元中存在的POI数量。<br><br>  首先打开空间连接工具，目标要素：fishnet。连接要素：POI数据。<br><br>  连接要素的字段映射：仅保留id字段。匹配选项：CONTAINS。<br><br>  生成的渔网将会产生一个新字段：Joint_Count</p><p><font size="4"><strong>4. 得到密度图</strong></font></p><p>  对第三步生成的渔网的属性表进行修改。分别添加面积字段和密度字段（类型为双精度，精度为10）。右键面积字段选择计算几何，可将单位修改为平方米。右键密度字段选择字段计算器，输入公式[Joint_Count]/[面积],得到密度值。<br><br>  打开符号系统选择数量-分级色彩-选择自己喜欢的颜色和分类，DONE!<br>      <img src="/2019/11/24/Arcmap%E9%80%9A%E8%BF%87%E6%B8%94%E7%BD%91%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90POI%E5%AF%86%E5%BA%A6%E5%9B%BE%E7%9A%84%E5%8A%9E%E6%B3%95/2.jpg" alt title="密度图"></p>]]></content>
+    <content type="html"><![CDATA[<p><font size="4"><strong>1. 导入数据</strong></font></p><p>  将POI点数据和边界POLYGON数据导入Arcmap。<br><br>  <strong>注意：数据需定义投影坐标，数据框的坐标也进行修改。</strong><br>  <img src="/2019/11/24/Arcmap%E9%80%9A%E8%BF%87%E6%B8%94%E7%BD%91%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90POI%E5%AF%86%E5%BA%A6%E5%9B%BE%E7%9A%84%E5%8A%9E%E6%B3%95/1.jpg" title="数据点图"></p><p><font size="4"><strong>2. 生成渔网</strong></font></p><p>  这一步是生成选定一定像元大小的渔网。<br><br>  首先打开创建渔网工具，输出要素类：定义储存位置和名词。<br><br>  模板范围：选择边界。像元宽度和高度根据实际需求选择（本例中选择200*200）<br><br>  取消创建标注点选择，几何类型更改为polygon。</p><p><font size="4"><strong>3. Spatial Join</strong></font></p><p>  在第二步生成的渔网是没有包括实质信息的，这一步是通过Spatial Join计算出渔网中每个像元中存在的POI数量。<br><br>  首先打开空间连接工具，目标要素：fishnet。连接要素：POI数据。<br><br>  连接要素的字段映射：仅保留id字段。匹配选项：CONTAINS。<br><br>  生成的渔网将会产生一个新字段：Joint_Count</p><p><font size="4"><strong>4. 得到密度图</strong></font></p><p>  对第三步生成的渔网的属性表进行修改。分别添加面积字段和密度字段（类型为双精度，精度为10）。右键面积字段选择计算几何，可将单位修改为平方米。右键密度字段选择字段计算器，输入公式[Joint_Count]&#x2F;[面积],得到密度值。<br><br>  打开符号系统选择数量-分级色彩-选择自己喜欢的颜色和分类，DONE!<br>      <img src="/2019/11/24/Arcmap%E9%80%9A%E8%BF%87%E6%B8%94%E7%BD%91%E5%B7%A5%E5%85%B7%E7%94%9F%E6%88%90POI%E5%AF%86%E5%BA%A6%E5%9B%BE%E7%9A%84%E5%8A%9E%E6%B3%95/2.jpg" title="密度图"></p>]]></content>
     
-    <summary type="html">
     
-      简单生成渔网图
-    
-    </summary>
+    <summary type="html">简单生成渔网图</summary>
     
     
     
-      <category term="tutorial" scheme="http://arielw.xyz/tags/tutorial/"/>
     
-      <category term="arcgis" scheme="http://arielw.xyz/tags/arcgis/"/>
+    <category term="tutorial" scheme="http://arielw.xyz/tags/tutorial/"/>
     
-      <category term="map" scheme="http://arielw.xyz/tags/map/"/>
+    <category term="arcgis" scheme="http://arielw.xyz/tags/arcgis/"/>
+    
+    <category term="map" scheme="http://arielw.xyz/tags/map/"/>
     
   </entry>
   
@@ -46,21 +73,19 @@
     <link href="http://arielw.xyz/2019/11/24/ID%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%8E%92%E7%89%88/"/>
     <id>http://arielw.xyz/2019/11/24/ID%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E8%87%AA%E5%8A%A8%E6%8E%92%E7%89%88/</id>
     <published>2019-11-24T03:00:00.000Z</published>
-    <updated>2019-11-24T05:30:40.213Z</updated>
+    <updated>2022-05-17T01:14:10.522Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p><strong>注意：txt 必须是unicode编码</strong></p></blockquote><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ul><li>打开ID,新建文档，选择大小</li><li><strong>ctrl+D</strong>置入选择所有图片，复制所有图片名字，粘贴到notepad，通过REG得到图片的名字（这一步是选择名字，如果不要名字可跳转第三步）</li><li>在文件夹中选中所有需要的图片，shift+右键选择复制图片路径。粘贴至notepad直接使用替换，将”去除。</li></ul><p><img src="https://i.loli.net/2019/05/08/5cd2e5d3d597c.jpg" alt="选项"></p><ul><li>将txt后缀改成csv,添加首行为@route,另存为txt。</li></ul><p><img src="https://i.loli.net/2019/05/08/5cd2e71ce1028.jpg" alt="csv"></p><ul><li>设置合适的矩形框，打开数据合并选项，打开右上角角标，选择选择数据源，将做好的txt导入进来，将route拖入矩形框中，选择右下角：创建合并文档；选择多个记录，左下角可以选预览，接着在<strong>多个记录版面</strong>调整图片间距，点击确定即可完成。</li></ul><p><img src="https://i.loli.net/2019/05/08/5cd2e80dc811a.jpg" alt="矩形图片框架"></p><p><img src="https://i.loli.net/2019/05/08/5cd2e7c3003b3.jpg" alt="数据合并选项"></p><p><img src="https://i.loli.net/2019/05/08/5cd2e86608b22.jpg" alt="选择数据源"></p><p><img src="https://i.loli.net/2019/05/08/5cd2e8c15dbca.jpg" alt="将route拖入图片框"></p><p><img src="https://i.loli.net/2019/05/08/5cd2e908ba0da.jpg" alt="创建合并文档"></p><p><img src="https://i.loli.net/2019/05/08/5cd2e94212dbe.jpg" alt="选择多个记录,预览结果"></p>]]></content>
     
-    <summary type="html">
     
-      一个可能省时也可能没区别的方法
-    
-    </summary>
+    <summary type="html">一个可能省时也可能没区别的方法</summary>
     
     
     
-      <category term="InDeisgn" scheme="http://arielw.xyz/tags/InDeisgn/"/>
     
-      <category term="cut-corners" scheme="http://arielw.xyz/tags/cut-corners/"/>
+    <category term="InDeisgn" scheme="http://arielw.xyz/tags/InDeisgn/"/>
+    
+    <category term="cut-corners" scheme="http://arielw.xyz/tags/cut-corners/"/>
     
   </entry>
   
