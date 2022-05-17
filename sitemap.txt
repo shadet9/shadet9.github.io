@@ -6,8 +6,8 @@ http://arielw.xyz/
 http://arielw.xyz/tags/tutorial/
 http://arielw.xyz/tags/arcgis/
 http://arielw.xyz/tags/map/
+http://arielw.xyz/tags/InDeisgn/
+http://arielw.xyz/tags/cut-corners/
 http://arielw.xyz/tags/%E5%9D%90%E6%A0%87%E8%BD%AC%E6%8D%A2/
 http://arielw.xyz/tags/KML/
 http://arielw.xyz/tags/geojson/
-http://arielw.xyz/tags/InDeisgn/
-http://arielw.xyz/tags/cut-corners/
